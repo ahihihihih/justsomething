@@ -6,11 +6,8 @@
     <title>BEYOU - Be Yourself With BeYou</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Segoe+UI:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* Đã xóa các ký tự khoảng trắng lạ để tránh lỗi */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --primary: #BC2F3D;
@@ -56,41 +53,30 @@
             letter-spacing: 1px;
             flex-shrink: 0;
         }
+
         .cta-background {
-            /* KẾT HỢP LỚP PHỦ VÀ HÌNH ẢNH */
+            /* Đã thay link ảnh mẫu để hiển thị đẹp ngay */
             background-image:
-                /* Lớp phủ gradient màu đỏ đậm dần từ trên xuống dưới */
-                linear-gradient(
-                    to bottom,
-                    rgba(160, 48, 48, 0.85), /* Màu đỏ độ trong suốt 85% ở trên */
-                    rgba(160, 48, 48, 0.95)  /* Màu đỏ đậm hơn (95%) ở dưới để chữ dễ đọc */
-                ),
-                /* Đường dẫn đến hình ảnh gốc của bạn */
-                url('download.jpg');
-        
-            /* Căn chỉnh hình ảnh hiển thị đẹp trên mọi màn hình */
-            background-size: cover;       /* Phủ kín toàn bộ khung */
-            background-position: center;  /* Luôn lấy trung tâm bức ảnh */
+                linear-gradient(to bottom, rgba(160, 48, 48, 0.85), rgba(160, 48, 48, 0.95)),
+                url('https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
-        
-            /* Căn chỉnh bố cục nội dung */
-            color: #ffffff;               /* Chữ màu trắng */
-            text-align: center;           /* Căn giữa nội dung */
-            padding: 120px 20px;          /* Khoảng cách trên dưới rộng thoáng */
-            position: relative;           /* Để xử lý các thành phần con nếu cần */
+            color: #ffffff;
+            text-align: center;
+            padding: 120px 20px;
+            position: relative;
         }
         
-        /* Style cho tiêu đề lớn */
         .cta-background h2 {
-            font-family: 'Playfair Display', serif; /* Font chữ tiêu đề của bạn */
+            font-family: 'Playfair Display', serif;
             font-size: 3rem;
             margin-bottom: 16px;
             font-weight: 700;
         }
         
-        /* Style cho dòng mô tả nhỏ */
         .cta-background p {
-            font-family: 'Inter', sans-serif; /* Font chữ nội dung */
+            font-family: 'Segoe UI', sans-serif;
             font-size: 1.1rem;
             margin-bottom: 40px;
             opacity: 0.9;
@@ -99,7 +85,6 @@
             margin-right: auto;
         }
         
-        /* Style cho nút bấm (được làm nổi bật trên nền mới) */
         .btn-white-outline {
             background-color: #ffffff;
             color: #A03030;
@@ -134,9 +119,7 @@
             transition: color 0.3s ease;
         }
 
-        nav a:hover {
-            color: var(--primary);
-        }
+        nav a:hover { color: var(--primary); }
 
         .header-right {
             display: flex;
@@ -190,7 +173,6 @@
             box-shadow: 0 8px 16px rgba(188, 47, 61, 0.3);
         }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--cream) 0%, rgba(255, 246, 230, 0.5) 100%);
             padding: 80px 20px;
@@ -258,7 +240,6 @@
             color: white;
         }
 
-        /* Features Section */
         .features {
             max-width: 1200px;
             margin: 100px auto;
@@ -333,7 +314,6 @@
             line-height: 1.7;
         }
 
-        /* How It Works */
         .how-it-works {
             background: linear-gradient(135deg, var(--primary) 0%, #a0232f 100%);
             padding: 80px 20px;
@@ -359,9 +339,7 @@
             gap: 30px;
         }
 
-        .step {
-            text-align: center;
-        }
+        .step { text-align: center; }
 
         .step-number {
             font-size: 48px;
@@ -382,7 +360,6 @@
             line-height: 1.6;
         }
 
-        /* Technology Section */
         .technology {
             max-width: 1200px;
             margin: 100px auto;
@@ -418,7 +395,6 @@
             line-height: 1.6;
         }
 
-        /* Values Section */
         .values {
             background: var(--cream);
             padding: 80px 20px;
@@ -459,9 +435,7 @@
             gap: 10px;
         }
 
-        .value-icon {
-            font-size: 24px;
-        }
+        .value-icon { font-size: 24px; }
 
         .value-item p {
             color: var(--text-light);
@@ -469,7 +443,6 @@
             line-height: 1.7;
         }
 
-        /* CTA Section */
         .cta-section {
             background: linear-gradient(135deg, var(--primary) 0%, #a0232f 100%);
             padding: 80px 20px;
@@ -493,7 +466,6 @@
             margin-right: auto;
         }
 
-        /* Footer */
         footer {
             background: var(--dark);
             color: var(--cream);
@@ -517,13 +489,8 @@
             margin-bottom: 20px;
         }
 
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 10px;
-        }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 10px; }
 
         .footer-section ul li a {
             color: var(--cream);
@@ -532,9 +499,7 @@
             transition: color 0.3s ease;
         }
 
-        .footer-section ul li a:hover {
-            color: var(--primary);
-        }
+        .footer-section ul li a:hover { color: var(--primary); }
 
         .footer-bottom {
             border-top: 1px solid rgba(188, 47, 61, 0.3);
@@ -545,57 +510,25 @@
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         @media (max-width: 768px) {
-            nav {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .section-title {
-                font-size: 32px;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .hero-buttons a, .hero-buttons button {
-                width: 100%;
-                max-width: 300px;
-                text-align: center;
-            }
-
-            .header-right {
-                flex-direction: column;
-                gap: 10px;
-            }
+            nav { display: none; }
+            .hero h1 { font-size: 36px; }
+            .section-title { font-size: 32px; }
+            .features-grid { grid-template-columns: 1fr; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .hero-buttons a, .hero-buttons button { width: 100%; max-width: 300px; text-align: center; }
+            .header-right { flex-direction: column; gap: 10px; }
+            .cta-background h2 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <header>
         <div class="header-content">
             <div class="logo">BEYOU</div>
@@ -615,7 +548,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1 id="hero-title">Be Yourself With BeYou</h1>
@@ -632,21 +564,19 @@
     
     <section class="cta-background">
         <div class="container">
-            <h2>Sẵn Sàng Khám Phá Phong Cách Của Bạn?</h2>
-            <p>
+            <h2 id="mid-cta-title">Sẵn Sàng Khám Phá Phong Cách Của Bạn?</h2>
+            <p id="mid-cta-desc">
                 Tải BEYOU ngay hôm nay và bắt đầu hành trình tìm hiểu bản thân với công nghệ AI tiên tiến.
             </p>
-            <a href="#" class="btn-white-outline">Tải Ứng Dụng Miễn Phí</a>
+            <a href="#" class="btn-white-outline" id="mid-cta-btn">Tải Ứng Dụng Miễn Phí</a>
         </div>
     </section>
     
-    <!-- Features Section -->
     <section class="features" id="features">
         <h2 class="section-title" id="feat-title">Tính Năng Nổi Bật</h2>
         <div class="features-grid" id="features-grid"></div>
     </section>
 
-    <!-- How It Works -->
     <section class="how-it-works" id="how">
         <div class="how-it-works-content">
             <h2 id="how-title">Cách Sử Dụng</h2>
@@ -654,13 +584,11 @@
         </div>
     </section>
 
-    <!-- Technology Section -->
     <section class="technology" id="technology">
         <h2 class="section-title" id="tech-title">Công Nghệ Đứng Sau</h2>
         <div class="tech-grid" id="tech-grid"></div>
     </section>
 
-    <!-- Values Section -->
     <section class="values" id="values">
         <div class="values-content">
             <h2 id="val-title">Giá Trị Cốt Lõi</h2>
@@ -668,7 +596,6 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section">
         <h2 id="cta-title">Sẵn Sàng Khám Phá Phong Cách Của Bạn?</h2>
         <p id="cta-desc">Tải BEYOU ngay hôm nay và bắt đầu hành trình tìm hiểu bản thân với công nghệ AI tiên tiến.</p>
@@ -677,7 +604,6 @@
         </button>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -715,6 +641,10 @@
             cta: "Tải Ứng Dụng",
             btnStart: "Bắt Đầu Ngay",
             btnDemo: "Xem Demo",
+            // Thêm bản dịch cho phần giữa trang
+            midCtaTitle: "Sẵn Sàng Khám Phá Phong Cách Của Bạn?",
+            midCtaDesc: "Tải BEYOU ngay hôm nay và bắt đầu hành trình tìm hiểu bản thân với công nghệ AI tiên tiến.",
+            midCtaBtn: "Tải Ứng Dụng Miễn Phí",
             featTitle: "Tính Năng Nổi Bật",
             features: [
                 {icon:"🎨",title:"Phân Tích Tông Da",desc:"AI nhận diện tông da của bạn trong 3 giây. Nhận được gợi ý màu makeup hoàn hảo."},
@@ -767,6 +697,10 @@
             cta: "Download App",
             btnStart: "Get Started",
             btnDemo: "View Demo",
+            // Added translation for Middle CTA
+            midCtaTitle: "Ready to Discover Your Style?",
+            midCtaDesc: "Download BEYOU today and start your journey to understanding yourself with advanced AI technology.",
+            midCtaBtn: "Download Free App",
             featTitle: "Key Features",
             features: [
                 {icon:"🎨",title:"Skin Tone Analysis",desc:"AI detects your skin tone in 3 seconds for perfect makeup recommendations."},
@@ -829,6 +763,11 @@
             document.getElementById('btn-demo').textContent = content.btnDemo;
             document.getElementById('cta-download').textContent = content.cta;
             
+            // Update Middle CTA (New)
+            document.getElementById('mid-cta-title').textContent = content.midCtaTitle;
+            document.getElementById('mid-cta-desc').textContent = content.midCtaDesc;
+            document.getElementById('mid-cta-btn').textContent = content.midCtaBtn;
+
             // Update features
             document.getElementById('feat-title').textContent = content.featTitle;
             document.getElementById('features-grid').innerHTML = content.features.map(f => `
@@ -867,7 +806,7 @@
                 </div>
             `).join('');
             
-            // Update CTA
+            // Update CTA (Bottom)
             document.getElementById('cta-title').textContent = content.ctaTitle;
             document.getElementById('cta-desc').textContent = content.ctaDesc;
             document.getElementById('cta-final').textContent = content.ctaFinal;

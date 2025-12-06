@@ -56,6 +56,68 @@
             letter-spacing: 1px;
             flex-shrink: 0;
         }
+        .cta-background {
+            /* KẾT HỢP LỚP PHỦ VÀ HÌNH ẢNH */
+            background-image:
+                /* Lớp phủ gradient màu đỏ đậm dần từ trên xuống dưới */
+                linear-gradient(
+                    to bottom,
+                    rgba(160, 48, 48, 0.85), /* Màu đỏ độ trong suốt 85% ở trên */
+                    rgba(160, 48, 48, 0.95)  /* Màu đỏ đậm hơn (95%) ở dưới để chữ dễ đọc */
+                ),
+                /* Đường dẫn đến hình ảnh gốc của bạn */
+                url('download.jpg');
+        
+            /* Căn chỉnh hình ảnh hiển thị đẹp trên mọi màn hình */
+            background-size: cover;       /* Phủ kín toàn bộ khung */
+            background-position: center;  /* Luôn lấy trung tâm bức ảnh */
+            background-repeat: no-repeat;
+        
+            /* Căn chỉnh bố cục nội dung */
+            color: #ffffff;               /* Chữ màu trắng */
+            text-align: center;           /* Căn giữa nội dung */
+            padding: 120px 20px;          /* Khoảng cách trên dưới rộng thoáng */
+            position: relative;           /* Để xử lý các thành phần con nếu cần */
+        }
+        
+        /* Style cho tiêu đề lớn */
+        .cta-background h2 {
+            font-family: 'Playfair Display', serif; /* Font chữ tiêu đề của bạn */
+            font-size: 3rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        
+        /* Style cho dòng mô tả nhỏ */
+        .cta-background p {
+            font-family: 'Inter', sans-serif; /* Font chữ nội dung */
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Style cho nút bấm (được làm nổi bật trên nền mới) */
+        .btn-white-outline {
+            background-color: #ffffff;
+            color: #A03030;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #ffffff;
+            display: inline-block;
+        }
+        
+        .btn-white-outline:hover {
+            background-color: transparent;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
 
         nav {
             display: flex;
@@ -567,7 +629,17 @@
             </div>
         </div>
     </section>
-
+    
+    <section class="cta-background">
+        <div class="container">
+            <h2>Sẵn Sàng Khám Phá Phong Cách Của Bạn?</h2>
+            <p>
+                Tải BEYOU ngay hôm nay và bắt đầu hành trình tìm hiểu bản thân với công nghệ AI tiên tiến.
+            </p>
+            <a href="#" class="btn-white-outline">Tải Ứng Dụng Miễn Phí</a>
+        </div>
+    </section>
+    
     <!-- Features Section -->
     <section class="features" id="features">
         <h2 class="section-title" id="feat-title">Tính Năng Nổi Bật</h2>

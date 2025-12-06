@@ -6,7 +6,6 @@
     <title>BEYOU - Be Yourself With BeYou</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Segoe+UI:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Đã xóa các ký tự khoảng trắng lạ để tránh lỗi */
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
@@ -54,8 +53,8 @@
             flex-shrink: 0;
         }
 
+        /* --- SỬA PHẦN NỀN CTA GIỮA TRANG --- */
         .cta-background {
-            /* Đã thay link ảnh mẫu để hiển thị đẹp ngay */
             background-image:
                 linear-gradient(to bottom, rgba(160, 48, 48, 0.85), rgba(160, 48, 48, 0.95)),
                 url('https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop'); 
@@ -173,8 +172,17 @@
             box-shadow: 0 8px 16px rgba(188, 47, 61, 0.3);
         }
 
+        /* --- SỬA PHẦN HERO (ĐẦU TRANG) ĐỂ CÓ ẢNH --- */
         .hero {
-            background: linear-gradient(135deg, var(--cream) 0%, rgba(255, 246, 230, 0.5) 100%);
+            /* Thêm ảnh nền và phủ lớp màu kem mờ (cream) để chữ dễ đọc */
+            background-image: 
+                linear-gradient(to bottom, rgba(255, 246, 230, 0.85), rgba(255, 246, 230, 0.95)),
+                url('https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop');
+            
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
             padding: 80px 20px;
             text-align: center;
             position: relative;
@@ -182,14 +190,7 @@
         }
 
         .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(188, 47, 61, 0.05) 0%, transparent 70%);
-            border-radius: 50%;
+            display: none; /* Ẩn vòng tròn trang trí cũ */
         }
 
         .hero-content {
@@ -641,7 +642,6 @@
             cta: "Tải Ứng Dụng",
             btnStart: "Bắt Đầu Ngay",
             btnDemo: "Xem Demo",
-            // Thêm bản dịch cho phần giữa trang
             midCtaTitle: "Sẵn Sàng Khám Phá Phong Cách Của Bạn?",
             midCtaDesc: "Tải BEYOU ngay hôm nay và bắt đầu hành trình tìm hiểu bản thân với công nghệ AI tiên tiến.",
             midCtaBtn: "Tải Ứng Dụng Miễn Phí",
@@ -697,7 +697,6 @@
             cta: "Download App",
             btnStart: "Get Started",
             btnDemo: "View Demo",
-            // Added translation for Middle CTA
             midCtaTitle: "Ready to Discover Your Style?",
             midCtaDesc: "Download BEYOU today and start your journey to understanding yourself with advanced AI technology.",
             midCtaBtn: "Download Free App",
@@ -763,7 +762,7 @@
             document.getElementById('btn-demo').textContent = content.btnDemo;
             document.getElementById('cta-download').textContent = content.cta;
             
-            // Update Middle CTA (New)
+            // Update Middle CTA
             document.getElementById('mid-cta-title').textContent = content.midCtaTitle;
             document.getElementById('mid-cta-desc').textContent = content.midCtaDesc;
             document.getElementById('mid-cta-btn').textContent = content.midCtaBtn;
